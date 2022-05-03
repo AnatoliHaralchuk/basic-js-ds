@@ -58,14 +58,14 @@ class BinarySearchTree {
 }
 
   remove( data ) {
-    removeData(this,data)
+    return removeData(this,data)
     function removeData(node, data){
       if (!node) {return null}
       if (node.data > data){
         node.left = removeData(node.left, data)
         return node
       }
-      else if (node.data > data){
+      else if (node.data < data){
         node.right = removeData(node.right, data)
         return node
       } else {
